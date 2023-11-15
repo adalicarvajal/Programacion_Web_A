@@ -1,0 +1,292 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat" , sans-serif;
+  background: gray;
+}
+.name{
+  color:black;
+}
+#name{
+  color:white;
+}
+
+.zonas{
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+  grid-template:
+    "zona1 zona2  zona3"  155px
+    "zona1 zona2  zona3"  auto/
+    auto   auto  auto
+  } 
+
+.transporte{
+  display: grid;
+  justify-content: center;
+  gap: 5px;
+  grid-template:
+    "vehiculo1"  120px
+    "vehiculo2"  120px
+    "vehiculo3"  120px
+  }
+
+  .tabla{
+    display: grid;
+    justify-content: center;
+    gap: 50px;
+    grid-template:
+      "miembro1"  250px
+      "miembro2"  auto
+      "miembro3"  auto
+      "miembro4"  250px
+      "miembro5"  auto; 
+  }
+
+.miembro1{
+  grid-area: miembro1;
+  border: black 2px solid; 
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.miembro2{
+  grid-area: miembro2;
+  border: black 2px solid; 
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.miembro3{
+  grid-area: miembro3;
+  border: black 2px solid; 
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+ .vehiculo1{
+  grid-area: vehiculo1;
+}
+ .vehiculo2{
+  grid-area: vehiculo2;
+
+}
+.vehiculo3{
+  grid-area: vehiculo3;
+
+}
+.zona1{
+  grid-area: zona1;
+
+}
+ .zona2{
+  grid-area: zona2;
+
+}
+.zona3{
+  grid-area: zona3;
+
+}
+
+.miembro4{
+  grid-area: miembro4;
+  border: black 2px solid; 
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.miembro5{
+  grid-area: miembro5;
+  border: black 2px solid; 
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.foto{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.tarifas{
+  width: 90;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns:repeat(4, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 5px;
+}
+.titulo-tabla{
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  justify-items: center;
+  align-items: center;
+}
+.encabezados{
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+.items{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border: black 1px solid;
+}
+.items1, .items2, .items3{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  border: black 1px solid;
+}
+
+img{
+  width: 150px;
+}
+
+.contenedor > *{
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+.carro:hover{
+  transform: scale(1.1);
+}
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.contenedor{
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  120px
+    "main"    auto
+    "sidebar" 500px
+    "footer"  60px;
+}
+
+.promo{
+  display: grid;
+  justify-content: center;
+
+}
+
+.box{
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 1rem #00000025 inset;
+}
+
+.grid-responsive{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap:1rem;
+}
+
+.button{
+  padding: 0.5rem;
+  background-color: white;
+  font-family:"Montserrat" , sans-serif;
+}
+.button:hover{
+  box-shadow: 0 0 1rem #00000050;
+  background-color: black;
+  color: white;
+  transition: .5s;
+}
+.addHome {
+  padding: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+}
+
+
+
+@media(min-width: 600px){
+  .tabla{
+    grid-template:
+    "miembro1 miembro1" 250px
+    "miembro2  miembro2" 250px
+    "miembro3  miembro3"  250px
+    "miembro4  miembro4" 250px
+    "miembro5  miembro5" 250px /
+    200px    auto;
+  }
+  .contenedor {
+    grid-template:
+      "header  header" 120px
+      "sidebar   main"   auto
+      "footer  footer " 100px /
+      200px    auto;
+  }
+  .zonas{
+    grid-template: 
+    "zona1 zona2 zona3" auto
+    "zona1 zona2 zona3" auto/
+    auto  auto   auto;
+   
+  }
+  .transporte{
+    grid-template: 
+    "vehiculo1 vehiculo2 vehiculo3" 100px
+    "vehiculo1 vehiculo2 vehiculo3" auto/
+     150px  auto   150px;
+  }
+
+}
+.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+@media(min-width: 900px){
+  .tabla{
+    grid-template:
+    "miembro1 miembro1 miembro2 miembro2 miembro3 miembro3" 100px
+    "miembro1 miembro1 miembro2 miembro2 miembro3 miembro3" 200px
+    "miembro5 miembro5 miembro5 miembro4 miembro4 miembro4" 300px/
+      150px    150px    150px    150px   150px    150px ;
+  }
+  .contenedor{
+    grid-template:
+      "header  header header"  120px
+      "main    main   sidebar " auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+  .zonas{
+    grid-template:
+    "zona1 zona2 zona3" 100px
+    "zona1 zona2 zona3" auto/
+     auto  auto   auto;
+}
+}

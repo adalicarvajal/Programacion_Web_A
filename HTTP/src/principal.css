@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2? family= Montserrat:wght@900 & display=swap');		
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+
+}
+
+body {
+	font-family: "Montserrat" , sans-serif;
+    color: #FFF;
+}
+
+.principal{
+	width: 100%;
+	height: 100vh;
+	background-image: url('fondo.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+nav{
+	height: 100px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	width: 120px;
+	margin-left:20px ;
+}
+
+.bar-btn{
+	font-size: 25px;
+	color: #FFF;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.nav-menu {
+	position: fixed;
+	width: 100%;
+	height: 0vh;
+	top: 100px;
+	background: rgba(255, 255, 255, 0.50);
+	text-align: center;
+	transition: all .5s;
+}
+
+.nav-menu li{
+	display: none;
+	line-height: 30px;
+	margin: 50px 0;
+	transition: all .5s;
+}
+
+.nav-menu li a{
+	color: #000;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+
+
+.nav-menu li a.active, .nav-menu li a:hover{
+	color: rgb(248, 8, 8);
+	transition: .3s;
+}
+
+#check{
+	display: none;
+}
+
+#check:checked ~ .nav-menu {
+	height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+	display: block;
+
+}
+
+.banner-text{
+	padding: 0 30px;
+	margin-top: 150px;
+	text-align: center;
+	color: #FFF;
+}
+
+.banner-text h1{
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+
+.banner-text span{
+	color: rgb(248, 8, 8);
+}
+
+.banner-text h2{
+	font-size: 16px;
+	font-weight: 600;
+}
+#titulo{
+	display: grid;
+	color:white;
+	justify-content: center;
+	align-items: center;
+  }
+
+#log{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+  
+  .login-form {
+	background: #222;
+	box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+	min-height: 10rem;
+	margin: auto;
+	max-width: 50%;
+	padding: .5rem;
+  }
+  .login-text {
+	background: hsl(40,30,60);
+	border-bottom: .5rem solid white;
+	color: white;
+	font-size: 1.5rem;
+	margin: 0 auto;
+	max-width: 50%;
+	padding: .5rem;
+	text-align: center;
+	text-shadow: 1px -1px 0 rgba(0,0,0,0.3);
+  }
+  
+  .login-username, .login-password {
+	background: transparent;
+	border: 0 solid;
+	border-bottom: 1px solid rgba(white, .5);
+	color: white;
+	display: block;
+	margin: 1rem;
+	padding: .5rem;
+	transition: 250ms background ease-in;
+	width: calc(100% - 3rem);
+  }
+  
+  .login-forgot-pass {
+	border-bottom: 1px solid white;
+	bottom: 0;
+	color: white;
+	cursor: pointer;
+	display: block;
+	font-size: 75%;
+	left: 0;
+	opacity: 0.6;
+	padding: .5rem;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+	width: 100%;
+  }
+  
+  .login-submit {
+	border: 1px solid #ffffff; 
+	display: block;
+	margin: 1rem auto;
+	min-width: 1px;
+	padding: 10px; /*espacio alrededor texto*/
+	background:transparent; /*color botón*/
+	color: #ffffff; /*color texto*/
+	font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+	border-radius: 50px; /*bordes redondos*/
+	margin: 1rem auto;
+
+  }
+  
+  
+  
+  
+  [class*=underlay] {
+	left: 0;
+	min-height: 100%;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+  }
+
+  .underlay-black {
+	background: rgba(0,0,0,0.7);
+	z-index: -1;
+  }
+  
+  @keyframes hue-rotate {
+	from {
+	  -webkit-filter: grayscale(30%) hue-rotate(0deg);
+	}
+	to {
+	  -webkit-filter: grayscale(30%) hue-rotate(360deg);
+	}
+  }
+  
+@media screen and (min-width:900px){
+	.logo{
+			margin-left: 50px;
+	}
+	nav{
+		height: 100px;
+	}
+
+	.bar-btn{
+		display: none;
+	}
+
+	.nav-menu{
+		position: relative;
+		height: 100px;
+		top:0;
+		background: none;
+		transition: none;
+		text-align: right;
+		margin-right: 50px;
+	}
+
+	.nav-menu li {
+		display: inline-block;
+		line-height: 100px;
+		margin:0 20px;
+		transition: none;
+	}
+
+	.nav-menu li a {
+		font-size: 12px;
+	}
+
+	.banner-text h1{
+		font-size: 70px;
+		margin-bottom: 30px;
+	}
+
+	.banner-text h2{
+		font-size: 20px;
+	}
+}
